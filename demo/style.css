@@ -1,0 +1,364 @@
+:root {
+    --h: 203;
+    --s: 82;
+    --l: 58;
+    --color: var(--h), calc((var(--s) * 100%)/ 100);
+    --color-defauslt: hsl(var(--color), 60%);
+    --color-primary-darker: hsl(var(--color), 50%);
+    --color-primary-light: hsl(var(--color), 30%);
+    --color-primary-extra-light: hsl(var(--color), 89%);
+}
+.style-controler {
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 15px;
+    top: 30px;
+    left: 30px;
+    background-color: var(--color-defauslt);
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+    z-index: 11;
+}
+@media (max-width: 1024px) {
+    .style-controler {
+        top: initial;
+        bottom: 30px;
+   }
+}
+.main {
+    background-color: var(--color-primary-extra-light);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+.images_container{
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: relative;
+}
+.wave-img {
+    position: absolute;
+    user-select: none;
+    transition: 3s;
+    animation-name: waveAnimation;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.wave-img--1 {
+    bottom: 0;
+    left: -50px;
+    width: calc(100% + 100px);
+    z-index: 4;
+    animation-delay: -3s;
+}
+.wave-img--1 > path {
+    fill: var(--color-defauslt);
+}
+.wave-img--2 {
+    bottom: 0%;
+    right: -50px;
+    width: calc(100% + 100px);
+    z-index: 3;
+}
+.wave-img--2 > path {
+    fill: var(--color-primary-darker);
+}
+.wave-img--3 {
+    bottom: 0%;
+    left: -50px;
+    width: calc(100% + 100px);
+    z-index: 2;
+    animation-delay: -1s;
+}
+.wave-img--3 > path {
+    fill: var(--color-primary-light);
+}
+.wave-img--4 {
+    bottom: 9%;
+    right: -50px;
+    width: calc(100% + 100px);
+    z-index: 1;
+    animation-delay: -2s;
+}
+@keyframes waveAnimation {
+    0%{
+        transform: translateX(-50px);
+   }
+    100%{
+        transform: translateX(40px);
+   }
+}
+.garbage {
+    position: absolute;
+    z-index: 10;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.33s;
+    animation-name: garbageAnimation;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.clear {
+    display: none;
+}
+.garbage--1 {
+    bottom: 0;
+    padding-bottom: 8%;
+    left: 8%;
+}
+.garbage--2 {
+    bottom: 0;
+    padding-bottom: 14%;
+    left: 25%;
+    animation-delay: -3.5s;
+}
+.garbage--3 {
+    bottom: 0;
+    padding-bottom: 10%;
+    right: 25%;
+    animation-delay: -2s;
+}
+.garbage--4 {
+    bottom: 0;
+    padding-bottom: 13%;
+    right: 47%;
+    animation-delay: -1s;
+}
+.garbage--5 {
+    bottom: 0;
+    padding-bottom: 6%;
+    right: 59%;
+    animation-delay: -2s;
+}
+.garbage--6 {
+    bottom: 0;
+    padding-bottom: 4%;
+    right: 11%;
+    animation-delay: -1s;
+}
+@keyframes garbageAnimation {
+    0%{
+        transform: translateY(-10px);
+   }
+    100%{
+        transform: translateY(5px);
+   }
+}
+.fish {
+    position: absolute;
+    display: none;
+    bottom: 20%;
+    left: 50%;
+    z-index: 2;
+    width: 70px;
+    height: 70px;
+    transition: 15s;
+    animation-name: fishAnimation;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.fish--2 {
+    left: 20%;
+    animation-delay: -2.1s;
+}
+.fish--3 {
+    left: 30%;
+    animation-delay: -1.7s;
+}
+.fish--4 {
+    left: 40%;
+    animation-delay: -0.3s;
+}
+.fish--5 {
+    left: 60%;
+    animation-delay: -1.2s;
+}
+.fish-jump {
+    display: block;
+}
+@keyframes fishAnimation {
+    0%{
+        transform: rotate(-45deg) translate(0px, 0px);
+   }
+    40% {
+        transform: rotate(0deg) translate( 200px, -80px);
+   }
+    100%{
+        transform: rotate(45deg) translate( 600px, 0px);
+   }
+}
+.timer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    padding: 80px 20px 120px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+}
+@media (max-width: 800px) {
+    .timer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+   }
+}
+.timer-numbers {
+    margin-bottom: 50px;
+    display: flex;
+    column-gap: 25px;
+    text-shadow: -2px 0px 0px #fff, 2px 0px 0px #fff, 0px -2px 0px #fff, 0px 2px 0px #fff;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    color: rgb(0, 30, 45);
+}
+.timer-numbers_item {
+    min-width: 145px;
+}
+.timer-numbers_item-data::-moz-selection, .timer-numbers_item-text::-moz-selection, .timer-text>span::-moz-selection, .timer-numbers_dots::-moz-selection {
+    background-color: var(--color-primary-darker);
+}
+.timer-numbers_item-data::selection, .timer-numbers_item-text::selection, .timer-text>span::selection, .timer-numbers_dots::selection {
+    background-color: var(--color-primary-darker);
+}
+.timer-numbers_item-data {
+    font-size: 90px;
+    font-weight: 700;
+}
+.timer-numbers_item-text {
+    font-size: 45px;
+    font-weight: 700;
+}
+.timer-numbers_dots {
+    font-size: 80px;
+}
+@media (max-width: 800px) {
+    .timer-numbers {
+        column-gap: 15px;
+   }
+    .timer-numbers_item {
+        min-width: 78px;
+   }
+    .timer-numbers_item-data {
+        font-size: 42px;
+        margin-bottom: 30px;
+   }
+    .timer-numbers_item-text {
+        font-size: 24px;
+        font-weight: 700;
+   }
+    .timer-numbers_dots {
+        font-size: 36px;
+   }
+}
+@media (max-width: 550px) {
+    .timer-numbers {
+        column-gap: 5px;
+   }
+    .timer-numbers_item {
+        min-width: 64px;
+   }
+    .timer-numbers_item-data {
+        font-size: 35px;
+        margin-bottom: 20px;
+   }
+    .timer-numbers_item-text {
+        font-size: 16px;
+        font-weight: 700;
+   }
+    .timer-numbers_dots {
+        font-size: 30px;
+   }
+}
+.timer-title, .timer-title>span {
+    color: rgb(0, 30, 45);
+    outline: none;
+    text-shadow: -1px 0px 0px #fff, 1px 0px 0px #fff, 0px -1px 0px #fff, 0px 1px 0px #fff;
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    max-width: 500px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.timer-title::-moz-selection {
+    background-color: var(--color-primary-darker);
+}
+.timer-title::selection {
+    background-color: var(--color-primary-darker);
+}
+@media (max-width: 800px) {
+    .timer-title {
+        font-size: 28px;
+   }
+}
+.timer-text, .timer-text>span {
+    color: rgb(0, 30, 45);
+    outline: none;
+    text-shadow: -1px 0px 0px #fff, 1px 0px 0px #fff, 0px -1px 0px #fff, 0px 1px 0px #fff;
+    font-size: 36px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.timer-text::-moz-selection {
+    background-color: var(--color-primary-darker);
+}
+.timer-text::selection {
+    background-color: var(--color-primary-darker);
+}
+@media (max-width: 800px) {
+    .timer-text {
+        font-size: 24px;
+   }
+}
+@media (max-width: 1024px) {
+    .garbage {
+        width: 70px;
+   }
+}
+@media (max-width: 800px) {
+    .fish {
+        bottom: 0;
+   }
+}

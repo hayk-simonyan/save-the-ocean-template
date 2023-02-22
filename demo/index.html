@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Save the Ocean</title>
+  </head>
+  <body>
+    <main class="main" id="main">
+      <section class="images_container">
+        <div class="style-controler">
+          <p>Select a Color:</p>
+          <input type="color" id="color_palet" onchange="chnageColor()" />
+          <p>Set the Content:</p>
+          <label>
+            <input type="checkbox" id="title-check" onchange="showTitle()" checked="true" />
+            <span>Title</span>
+          </label>
+          <label>
+            <input type="checkbox" id="description-check" onchange="showDescription()" checked="true" />
+            <span>Description</span>
+          </label>
+        </div>
+        <svg class="wave-img wave-img--1" xmlns="http://www.w3.org/2000/svg" width="2003" viewBox="0 0 2003 246" fill="none">
+          <path opacity="1" d="M41.7671 8.52612C24.7671 8.52612 7.60042 18.0261 0.76709 22.0261V245.026H2002.77V0.526123C1969.27 1.52612 1923.46 37.0261 1891.77 37.0261C1840.77 37.0261 1786.77 9.02612 1750.77 9.52612C1714.77 10.0261 1685.77 29.0261 1632.27 29.0261C1572.27 29.0261 1554.77 1.02612 1474.77 1.02612C1429.77 1.02612 1370.77 34.5261 1337.77 34.5261C1304.77 34.5261 1260.27 9.52612 1227.77 9.52612C1185.77 9.52612 1167.77 34.0261 1124.27 34.5261C1080.77 35.0261 1024.77 1.52612 961.767 1.02612C898.767 0.526123 863.267 32.5261 825.267 34.5261C787.267 36.5261 751.767 13.0261 715.767 9.52612C672.267 5.29696 642.767 23.5261 609.267 23.5261C569.375 23.5261 533.963 1.52612 493.767 1.52612C439.267 1.52612 400.975 31.2729 352.767 32.0261C311.767 32.6667 268.267 11.0261 232.767 11.0261C192.06 11.0261 177.528 23.5261 135.767 23.5261C105.767 23.5261 67.7671 8.52612 41.7671 8.52612Z" fill="#80C1E8" />
+        </svg>
+        <svg class="wave-img wave-img--2" xmlns="http://www.w3.org/2000/svg" width="2040" viewBox="0 0 2040 305" fill="none">
+          <path opacity="0.5" d="M41.2671 8.02612C24.2671 8.02612 7.10042 17.5261 0.26709 21.5261V304.526H2039.27V0.026123C2005.77 1.02612 1922.96 36.5261 1891.27 36.5261C1840.27 36.5261 1785.77 1.02612 1749.77 1.52612C1713.77 2.02612 1684.27 14.5261 1630.77 14.5261C1570.77 14.5261 1541.27 0.526123 1461.27 0.526123C1416.27 0.526123 1370.27 34.0261 1337.27 34.0261C1304.27 34.0261 1263.27 1.52612 1230.77 1.52612C1188.77 1.52612 1167.27 33.5261 1123.77 34.0261C1080.27 34.5261 1024.27 1.02612 961.267 0.526123C898.267 0.026123 862.767 32.0261 824.767 34.0261C786.767 36.0261 751.267 12.5261 715.267 9.02612C671.767 4.79696 642.267 23.0261 608.767 23.0261C568.875 23.0261 533.463 1.02612 493.267 1.02612C438.767 1.02612 400.475 30.7729 352.267 31.5261C311.267 32.1667 267.767 10.5261 232.267 10.5261C191.56 10.5261 177.028 23.0261 135.267 23.0261C105.267 23.0261 67.2671 8.02612 41.2671 8.02612Z" fill="#4C98C9" />
+        </svg>
+        <svg class="wave-img wave-img--3" xmlns="http://www.w3.org/2000/svg" width="2003" viewBox="0 0 2003 382" fill="none">
+          <path d="M1961.27 15.026C1978.27 15.026 1995.43 24.526 2002.27 28.526V381.526H0.26709V7.02603C33.7671 8.02603 49.5732 41.026 81.2671 41.026C132.267 41.026 143.767 -0.689231 231.267 0.526047C291.267 1.35938 317.267 35.526 370.767 35.526C430.767 35.526 445.267 0.526032 525.267 0.526032C570.267 0.526032 632.267 41.026 665.267 41.026C698.267 41.026 739.267 8.52603 771.767 8.52603C813.767 8.52603 835.267 40.526 878.767 41.026C922.267 41.526 978.267 8.02603 1041.27 7.52603C1104.27 7.02603 1139.77 39.026 1177.77 41.026C1215.77 43.026 1251.27 19.526 1287.27 16.026C1330.77 11.7969 1360.27 30.026 1393.77 30.026C1433.66 30.026 1469.07 8.02603 1509.27 8.02603C1563.77 8.02603 1602.06 37.7728 1650.27 38.526C1691.27 39.1667 1734.77 17.526 1770.27 17.526C1810.97 17.526 1825.51 30.026 1867.27 30.026C1897.27 30.026 1935.27 15.026 1961.27 15.026Z" fill="#2878B3" />
+        </svg>
+        <img class="garbage garbage--1" src="./images/garbage1.png" alt="garbage image" draggable="false" />
+        <img class="garbage garbage--2" src="./images/garbage2.png" alt="garbage image" draggable="false" />
+        <img class="garbage garbage--3" src="./images/garbage1.png" alt="garbage image" draggable="false" />
+        <img class="garbage garbage--4" src="./images/garbage3.png" alt="garbage image" draggable="false" />
+        <img class="garbage garbage--5" src="./images/garbage4.png" alt="garbage image" draggable="false" />
+        <img class="garbage garbage--6" src="./images/garbage4.png" alt="garbage image" draggable="false" />
+        <img class="fish fish--1" src="./images/fish.png" alt="fish image" />
+        <img class="fish fish--2" src="./images/fish.png" alt="fish image" />
+        <img class="fish fish--3" src="./images/fish.png" alt="fish image" />
+        <img class="fish fish--4" src="./images/fish.png" alt="fish image" />
+        <img class="fish fish--5" src="./images/fish.png" alt="fish image" />
+        <section class="timer" id="timer">
+          <div class="timer-numbers" id="coming-soon">
+            <div class="timer-numbers_item">
+              <p class="timer-numbers_item-data" id="days">-</p>
+              <p class="timer-numbers_item-text">Days</p>
+            </div>
+            <span class="timer-numbers_dots">:</span>
+            <div class="timer-numbers_item">
+              <p class="timer-numbers_item-data" id="hours">-</p>
+              <p class="timer-numbers_item-text">Hours</p>
+            </div>
+            <span class="timer-numbers_dots">:</span>
+            <div class="timer-numbers_item">
+              <p class="timer-numbers_item-data" id="minutes">-</p>
+              <p class="timer-numbers_item-text">Minutes</p>
+            </div>
+            <span class="timer-numbers_dots">:</span>
+            <div class="timer-numbers_item">
+              <p class="timer-numbers_item-data" id="seconds">-</p>
+              <p class="timer-numbers_item-text">Seconds</p>
+            </div>
+          </div>
+          <p class="timer-title" id="title">Save the Ocean</p>
+          <p class="timer-text" id="description">Click on the garbages in the ocean and watch as the fishes begin to gather and swim towards a cleaner and safer environment</p>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDAece7M7h5XK-AN3Lt1FWkdRcdQQZQ6VI",
+        authDomain: "save-the-ocean-4e668.firebaseapp.com",
+        projectId: "save-the-ocean-4e668",
+        storageBucket: "save-the-ocean-4e668.appspot.com",
+        messagingSenderId: "640105799316",
+        appId: "1:640105799316:web:8d2c32f8d269ce880cde81",
+        measurementId: "G-QV9L0YFVF9"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+  </body>
+</html>

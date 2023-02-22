@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1, h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+.displayNone {
+    display: none;
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Documentation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <h1 class="content_title">Documentation</h1>
+        <p class="content_paragraph">Welcome to the documentation for our latest template! Here you'll find all the information you need to get started with your new website. From installation to customization, we've got you covered. If you have any questions or issues along the way, don't hesitate to reach out to our support team.</p>
+        <h2 class="content_sub-title">Folder Structure</h2>
+        <p class="content_paragraph">The template package you received contains 3 directories: demo, documentation, and template. Here's what each directory contains:</p>
+        <img src="img/folder-structure.png" alt="folder-structure-image" />
+        <br />
+        <ul>
+          <li class="content_paragraph">documentation/ - Start here to learn everything about the template and understand which file is responsible for what</li>
+          <li class="content_paragraph">demo/ - This is the demo page where you can experiment with different customizations like editing the title, description, colors, etc., and choose the design that best suits your needs</li>
+          <li class="content_paragraph">template/ - This is the main template which you'll use after finalizing your customizations. You'll need to apply the chosen configurations to this directory and then use it in your project</li>
+        </ul>
+        <h2 class="content_sub-title">Customization Instructions</h2>
+        <p class="content_paragraph">To customize the template, start by opening the "index.html" file located in the "demo" directory (demo/index.html) in your browser.</p>
+        <img src="img/demo.png" alt="demo-image" width="100%" />
+        <br />
+        <ul>
+          <li class="content_paragraph">Select a color: In the top left corner, you'll find the "Select a Color" section, choose the color you'd like to use for your template</li>
+          <li class="content_paragraph">Set the Content: Below the color picker, you'll see the "Set the Content" section. Here, you can enable or disable the title and description.</li>
+          <li class="content_paragraph">Title: Click on the page title and enter the desired title for your coming soon template.</li>
+          <li class="content_paragraph">Description: Click on the description to write a brief explanation for your coming soon template.</li>
+          <li class="content_paragraph">Launch Date: This will be set in the main template folder.</li>
+        </ul>
+        <h2 class="content_sub-title">Applying Customizations</h2>
+        <p class="content_paragraph">It's now time to apply the customizations to the main template.</p>
+        <p class="content_paragraph">Open the index.html file located in the template directory (template/index.html) in your browser.</p>
+        <ul>
+          <li class="content_paragraph">Apply Colors: Copy the HSL color values you selected from the demo page (without the percent symbol, just the numbers). <img src="img/color-picker.png" alt="Color Picker Image">
+            <br> Open the "style.css" file in the "template" folder (template/style.css) using a text editor. <br>
+            <br> Replace the --h, --s, and --l color variables with the corresponding H-S-L colors you selected (e.g., --h: 264, --s: 100, --l: 61). <br>
+            <br>
+            <img src="img/css-colors.png" alt="css-colors-image" />
+          </li>
+          <li class="content_paragraph">Apply Content: Open the "index.html" file located in the "template" folder (template/index.html) using a text editor. <br>
+            <br> Title: At the bottom of the index.html file, you'll find a paragraph tag with an id of "title." Add your title content here or remove this paragraph if you don't need to display the title. <br>
+            <br> Description: In a similar manner, you'll find a paragraph tag with an id of "description." Add your description here or remove this paragraph if you don't need to display the description. <br>
+            <br>
+            <img src="img/html-content.png" alt="html-content-image" />
+          </li>
+          <li class="content_paragraph">Launch Date: Lastly, set the launch date in the "script.js" file located in the "template" folder (template/script.js). <br>
+            <br> Open the file using a text editor and find the line under the comment "SET THE LAUNCH DATE HERE". <br>
+            <br> Replace the Date('March 15, 2023 15:37:25') with the launch date of your coming soon website. <br>
+            <br>
+            <img src="img/js-launch-date.png" alt="js-launch-date-image" />
+          </li>
+        </ul>
+        <h2 class="content_sub-title">Publish Your Coming Soon Website</h2>
+        <p class="content_paragraph">Once you have customized the template directory files, you are now ready to publish your website.</p>
+        <p class="content_paragraph">It is important to note that you only need to send the template/ directory with its files to your hosting provider. The demo/ and documentation/ folders were for the purpose of assisting you in customizing your website, and you don't need them for the deployment stage.</p>
+        <p class="content_paragraph">Thank you for choosing us, and we wish you the best of luck in your business!</p>
+        <h2 class="content_sub-title">Contact information</h2>
+        <p class="content_paragraph">For inquiries and recommendations, please reach us through email at propersolutionsofficial@gmail.com</p>
+      </div>
+    </main>
+  </body>
+</html>
